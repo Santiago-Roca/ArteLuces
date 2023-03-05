@@ -1,0 +1,32 @@
+.form-busqueda {
+    flex-grow: 1;
+}
+
+.btn-buscar {
+    width: 170px;
+    border-color: #fff;
+}
+
+.btn-buscar:hover {
+    border-color: #fff;
+}
+
+.carrito-head {
+    width: 70px;
+    text-align: center;
+    color: #fff;
+}
+
+.logo-img {
+    width: 34px;
+}
+
+.msg-greeting {
+    color: rgb(63, 45, 45);
+    text-align: center;
+}
+
+.navbar-nav{
+    width: 400px;
+    justify-content: space-between;
+}
