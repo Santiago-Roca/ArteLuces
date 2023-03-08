@@ -18,7 +18,7 @@
 }
 
 .logo-img {
-    width: 34px;
+    width: 31px;
 }
 
 .msg-greeting {
@@ -26,7 +26,73 @@
     text-align: center;
 }
 
-.navbar-nav{
+.navbar-nav {
     width: 400px;
     justify-content: space-between;
+}
+
+.tarjeta {
+    height: 150px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (min-width:767px) and (max-width: 788px) {
+    .tarjeta {
+        height: 190px;
+    }
+}
+
+.fila-itemList {
+    justify-content: space-around;
+}
+
+.fila-itemDetail {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-letra {
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    color: #d8d5d5;
+    font-size: 70px;
+    font-family: 'Pacifico', cursive;
+}
+
+.boxImg-detail {
+    width: 100%;
+    height: 290px;
+}
+
+.boxImg-detail img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fila-footer {
+    height: 70px;
+}
+
+.main {
+    min-height: calc(100vh - (70px + 66px));
+}
+
+.boxImg-principal {
+    height: calc(100vh - (70px + 66px));
+    width: 100%;
+}
+
+.boxImg-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.iconos {
+    font-size: 1.6rem;
 }

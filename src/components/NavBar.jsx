@@ -13,35 +13,32 @@ const NavBar = () => {
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
         <Navbar.Brand>
-          <img
-            className="logo-img"
-            src="https://raw.githubusercontent.com/santiGTI/Mundo-Movie/main/src/assets/imagenes/logo.png"
-            alt="logo-web"
-          />
+          <Link to={"/"}>
+            <img
+              className="logo-img"
+              src="../src/assets/imagenes/logo-luz.png"
+              alt="logo-web"
+            />
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-2 my-2 my-lg-0" navbarScroll>
-            <Nav.Link href="/">Inicio</Nav.Link>
-
-            {/* <Nav.Link href="/itemListContainer">ItemList</Nav.Link> */}
-            <Nav.Link as={Link} to="/itemListContainer">
-              ItemList
+            <Nav.Link as={Link} to="/inicio">
+              Inicio
             </Nav.Link>
-            {/* <Nav.Link as={Link} to="/prueba:id">Prueba</Nav.Link> */}
-
-            {/* <Link to="/itemListContainer"> */}
-            {/* <Nav.Link href="#action2">ItemList</Nav.Link> */}
-            {/* <button>ItemList</button>
-            </Link> */}
-
-            <Nav.Link href="#action3">Polular</Nav.Link>
-            <Nav.Link href="#action4">Deportes</Nav.Link>
-            <NavDropdown title="Series" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Recientes</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Polulares</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
-                Mejor puntuadas
+            <Nav.Link as={Link} to="/">
+              Catálogo de Productos
+            </Nav.Link>
+            <NavDropdown title="Categorias" id="collasible-nav-dropdown">
+              <NavDropdown.Item as={Link} to="/category/pared">
+                Luces de Pared
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/category/techo">
+                Luces de Techo
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/category/mesa">
+                Luces de Mesa
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
