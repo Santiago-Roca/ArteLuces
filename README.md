@@ -14,7 +14,7 @@ A hacer clic en un producto, se pueden observar los detalles del mismo. En caso 
 
 ### Página de Inicio
 ---
-![img-inicio](src/assets/imagenes/inicio-web.jpg)
+![img-inicio](src/assets/imagenes/inicioWeb.jpg)
 
 ### Catálogo de productos
 ---
