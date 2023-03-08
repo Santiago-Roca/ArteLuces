@@ -18,8 +18,8 @@ const ItemListContainer = () => {
     }
   };
 
-  const { cat } = useParams();
-  const catFilter = luces.filter((item) => item.categoria == cat);
+  const { category } = useParams();
+  const catFilter = luces.filter((item) => item.categoria == category);
 
   return (
     <section className="main">
