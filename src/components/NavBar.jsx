@@ -45,7 +45,7 @@ const NavBar = () => {
           <Form className="d-flex form-busqueda ms-4">
             <Form.Control
               type="search"
-              placeholder="Busqueda de Películas o Series"
+              placeholder="Buscar un producto"
               className="me-2"
               aria-label="Search"
             />
