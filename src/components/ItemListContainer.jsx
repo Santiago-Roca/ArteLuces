@@ -4,30 +4,35 @@ import ItemList from "./ItemList";
 
 const ItemListContainer = () => {
   const [luces, setLuces] = useState([]);
-  useEffect(() => {
-    cargarLuces();
-  }, []);
 
-  const cargarLuces = async () => {
+  const { category } = useParams();
+  console.log(category);
+
+  useEffect(() => {
+    cargarProductos(category);
+  }, [category]);
+
+  const cargarProductos = async (categoria) => {
     try {
+      console.log("Entré a cargar datos del JSON");
       const respuesta = await fetch("../src/datos.json");
       const datos = await respuesta.json();
-      setLuces(datos);
+      if (categoria == "pared" || categoria == "techo" || categoria == "mesa") {
+        const categoryFilter = datos.filter(
+          (item) => item.categoria == category
+        );
+        setLuces(categoryFilter);
+      } else {
+        setLuces(datos);
+      }
     } catch (error) {
       console.log(error);
     }
   };
 
-  const { category } = useParams();
-  const catFilter = luces.filter((item) => item.categoria == category);
-
   return (
     <section className="main">
-      {catFilter.length > 0 ? (
-        <ItemList listaProductos={catFilter} />
-      ) : (
-        <ItemList listaProductos={luces} />
-      )}
+      <ItemList listaProductos={luces} />
     </section>
   );
 };

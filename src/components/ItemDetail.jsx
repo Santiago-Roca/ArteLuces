@@ -1,5 +1,6 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import ItemCount from "./ItemCount";
 
 const ItemDetail = ({
   img,
@@ -24,6 +25,7 @@ const ItemDetail = ({
           <Button variant="dark">Agregar al Carrito</Button>
         </Card.Body>
       </Card>
+      <ItemCount />
     </>
   );
 };

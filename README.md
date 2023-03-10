@@ -25,4 +25,8 @@ A hacer clic en un producto, se pueden observar los detalles del mismo. En caso 
 ---
 ![item-detail](src/assets/imagenes/item-detail.jpg)
 
+### Ejemplo de funcionamiento
+---
+
+![item-detail](src/assets/gif/ArteLuces.gif)
 

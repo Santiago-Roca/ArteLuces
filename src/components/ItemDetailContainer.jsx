@@ -5,38 +5,35 @@ import ItemDetail from "./ItemDetail";
 const ItemDetailContainer = () => {
   const { id } = useParams();
 
-  const [luces, setLuces] = useState([]);
+  const [producto, setProducto] = useState({});
   useEffect(() => {
-    cargarLuces();
+    cargarProducto();
   }, []);
 
-  const cargarLuces = async () => {
+  const cargarProducto = async () => {
     try {
       const respuesta = await fetch("/src/datos.json");
       const datos = await respuesta.json();
-      setLuces(datos);
+      const item = datos.find((item) => item.id == id);
+      setProducto(item);
     } catch (error) {
       console.log(error);
     }
   };
 
-  const item = luces.filter((item) => item.id == id);
-
   return (
     <section className="main">
       <div className="raw container mx-auto text-center fila-itemDetail py-3">
-        {item.map((i) => (
-          <div key={i.id} className="col-5">
-            <ItemDetail
-              img={i.imagen}
-              nombre={i.nombre}
-              categoria={i.categoria}
-              descripcion={i.descripcion}
-              garantia={i.garantia}
-              precio={i.precio}
-            />
-          </div>
-        ))}
+        <div className="col-5">
+          <ItemDetail
+            img={producto.imagen}
+            nombre={producto.nombre}
+            categoria={producto.categoria}
+            descripcion={producto.descripcion}
+            garantia={producto.garantia}
+            precio={producto.precio}
+          />
+        </div>
       </div>
     </section>
   );
