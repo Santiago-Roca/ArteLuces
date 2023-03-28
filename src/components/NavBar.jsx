@@ -46,15 +46,13 @@ const NavBar = () => {
             <Form.Control
               type="search"
               placeholder="Buscar un producto"
-              className="me-2"
+              className="me-2 buscar-nav"
               aria-label="Search"
             />
             <Button className="btn-buscar" variant="dark">
               Buscar
             </Button>
-            <Link to={"/cart"}>
-              <CartWidget />
-            </Link>
+            <CartWidget />
           </Form>
         </Navbar.Collapse>
       </Container>

@@ -1,41 +1,33 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
+import Loading from "./Loading";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
-
+  const [cargando, setCargando] = useState(true);
   const [producto, setProducto] = useState({});
+
   useEffect(() => {
-    cargarProducto();
+    cargarProductoServidor();
   }, []);
 
-  const cargarProducto = async () => {
-    try {
-      const respuesta = await fetch("/src/datos.json");
-      const datos = await respuesta.json();
-      const item = datos.find((item) => item.id == id);
-      setProducto(item);
-    } catch (error) {
-      console.log(error);
-    }
+  //CARGAR PRODUCTO DEL SERVIDOR
+  const cargarProductoServidor = () => {
+    const db = getFirestore();
+    const item = doc(db, "luminarias", id);
+    getDoc(item).then((snapshot) => {
+      if (snapshot.exists()) {
+        const producto = { id: snapshot.id, ...snapshot.data() };
+        setProducto(producto);
+        setCargando(false);
+      }
+    });
   };
 
   return (
-    <section className="main">
-      <div className="raw container mx-auto text-center fila-itemDetail py-3">
-        <div className="col-5">
-          <ItemDetail
-            img={producto.imagen}
-            nombre={producto.nombre}
-            categoria={producto.categoria}
-            descripcion={producto.descripcion}
-            garantia={producto.garantia}
-            precio={producto.precio}
-          />
-        </div>
-      </div>
-    </section>
+    <section>{cargando ? <Loading /> : <ItemDetail item={producto} />}</section>
   );
 };
 
