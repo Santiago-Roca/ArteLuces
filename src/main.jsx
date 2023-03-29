@@ -5,6 +5,7 @@ import { initializeApp } from "firebase/app";
 
 const rootElement = document.getElementById("root");
 
+//Configuración Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyCV0-V-dGPeqOlrJmfdCjivp6k-pWsB24Y",
   authDomain: "arteluces-58b7c.firebaseapp.com",
@@ -14,7 +15,7 @@ const firebaseConfig = {
   appId: "1:554200012252:web:bff63ca7a013624b9f2b19",
 };
 
-// Initialize Firebase
+//Initialize Firebase
 initializeApp(firebaseConfig);
 
 ReactDOM.createRoot(rootElement).render(

@@ -12,16 +12,15 @@ const FormCompra = () => {
   const [correo, setCorreo] = useState("");
   const [confirmacionCorreo, setConfirmacionCorreo] = useState("");
   const [telefono, setTelefono] = useState("");
-  const [datos, setDatos] = useState({ nombre: "", correo: "", telefono: "" });
   const [orderId, setOrderId] = useState("");
 
   const { productosCarrito, valorTotal } = useContext(cartContext);
-  
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   useEffect(() => {
     if (orderId != "") {
-      swal ({
+      swal({
         title: "Orden Recibida!",
         text: `El ID de su orden es el siguiente: \n\n ${orderId}`,
         button: "Volver al Inicio",
@@ -31,11 +30,6 @@ const FormCompra = () => {
       });
     }
   }, [orderId]);
-
-  //NO LO USÉ AL FINAL !
-  // const infoCompra = (event) => {
-  //   setDatos({ ...datos, [event.target.name]: event.target.value });
-  // };
 
   //CREANDO ORDEN PARA SUBIR AL SERVIDOR
   const order = {
@@ -118,7 +112,6 @@ const FormCompra = () => {
                 value={nombre}
                 onChange={(e) => {
                   setNombre(e.target.value);
-                  // infoCompra(e);
                 }}
               />
               <Form.Label className="mt-2 mb-0">Email</Form.Label>
@@ -128,7 +121,6 @@ const FormCompra = () => {
                 value={correo}
                 onChange={(e) => {
                   setCorreo(e.target.value);
-                  // infoCompra(e);
                 }}
               />
               <Form.Label className="mt-2 mb-0">Confirmar Email</Form.Label>
@@ -158,7 +150,6 @@ const FormCompra = () => {
                 value={telefono}
                 onChange={(e) => {
                   setTelefono(e.target.value);
-                  // infoCompra(e);
                 }}
               />
             </Form.Group>

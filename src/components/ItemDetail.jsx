@@ -73,8 +73,8 @@ const ItemDetail = ({ item }) => {
 
           <Button
             className="mt-3 btn-agregar"
-            onClick={() => addItem(item, cantidad)}
             variant="dark"
+            onClick={() => addItem(item, cantidad)}
           >
             Agregar al Carrito
           </Button>
