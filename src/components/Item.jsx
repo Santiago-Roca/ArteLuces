@@ -13,7 +13,7 @@ const Item = ({ id, nombre, categoria, img }) => {
           {/* <NavLink to={`/item/${id}`}>
             <Button variant="dark">Detalles</Button>
           </NavLink> */}
-          <Link to={`/item/${id}`}>
+          <Link to={`/ArteLuces/item/${id}`}>
             <Button variant="dark">Detalles</Button>
           </Link>
         </Card.Body>

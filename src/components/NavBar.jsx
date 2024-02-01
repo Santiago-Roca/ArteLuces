@@ -23,7 +23,7 @@ const NavBar = () => {
   const { user, setUser } = useContext(cartContext)
 
   const showUser = () => {
-    return `{<Nav.Link as={Link} to="/inicio">
+    return `{<Nav.Link as={Link} to="/ArteLuces/inicio">
     Inicio
   </Nav.Link>}`
   }
@@ -38,7 +38,7 @@ const NavBar = () => {
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
         <Navbar.Brand>
-          <Link to={"/"}>
+          <Link to={"/ArteLuces"}>
             <img
               className="logo-img"
               src="../src/assets/imagenes/logo-luz.png"
@@ -49,10 +49,10 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-2 my-2 my-lg-0" navbarScroll>
-            <Nav.Link as={Link} to="/inicio">
+            <Nav.Link as={Link} to="/ArteLuces/inicio">
               Inicio
             </Nav.Link>
-            <Nav.Link as={Link} to="/">
+            <Nav.Link as={Link} to="/ArteLuces">
               Catálogo de Productos
             </Nav.Link>
             <NavDropdown title="Categorias" id="collasible-nav-dropdown">

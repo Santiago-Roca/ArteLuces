@@ -18,18 +18,18 @@ const RouterPrincipal = () => {
                 <NavBar />
 
                 <Routes>
-                    <Route exact path="/" element={<ItemListContainer />} />
-                    <Route exact path="/inicio" element={<Inicio />} />
-                    <Route exact path="/:category/:category" element={<ItemListContainer />} />
-                    <Route exact path="/item/:id" element={<ItemDetailContainer />} />
-                    <Route exact path="/cart" element={<Cart />} />
+                    <Route exact path="/ArteLuces/" element={<ItemListContainer />} />
+                    <Route exact path="/ArteLuces/inicio" element={<Inicio />} />
+                    <Route exact path="/ArteLuces/:category/:category" element={<ItemListContainer />} />
+                    <Route exact path="/ArteLuces/item/:id" element={<ItemDetailContainer />} />
+                    <Route exact path="/ArteLuces/cart" element={<Cart />} />
                     <Route path='*' element={<Error />} />
-                    <Route path='/persona/' element={<Persona />} />
-                    <Route path='/persona/:nombre' element={<Persona />} />
-                    <Route path='/persona/:nombre/:apellido' element={<Persona />} />
-                    <Route path='/redirigir' element={<Navigate to="/persona/santiago" />} />
+                    <Route path='/ArteLuces/persona/' element={<Persona />} />
+                    <Route path='/ArteLuces/persona/:nombre' element={<Persona />} />
+                    <Route path='/ArteLuces/persona/:nombre/:apellido' element={<Persona />} />
+                    <Route path='/ArteLuces/redirigir' element={<Navigate to="/ArteLuces/persona/santiago" />} />
 
-                    <Route path='/login' element={<Login />} />
+                    <Route path='/ArteLuces/login' element={<Login />} />
                 </Routes>
 
                 <Footer />

@@ -29,7 +29,7 @@ const LoginWidget = () => {
                     }} className="d-flex icon-box enlace">Cerrar Sesión</div>
                 </>
             ) :
-                (<Nav.Link as={Link} to="/login">
+                (<Nav.Link as={Link} to="/ArteLuces/login">
                     <div className='d-flex'>
                         <span className="material-symbols-outlined icon-login">person</span>
                     </div>
