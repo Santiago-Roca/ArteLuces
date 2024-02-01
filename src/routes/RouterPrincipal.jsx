@@ -23,7 +23,7 @@ const RouterPrincipal = () => {
                     <Route exact path="/ArteLuces/:category/:category" element={<ItemListContainer />} />
                     <Route exact path="/ArteLuces/item/:id" element={<ItemDetailContainer />} />
                     <Route exact path="/ArteLuces/cart" element={<Cart />} />
-                    <Route path='*' element={<Error />} />
+                    <Route path='ArteLuces/*' element={<Error />} />
                     <Route path='/ArteLuces/persona/' element={<Persona />} />
                     <Route path='/ArteLuces/persona/:nombre' element={<Persona />} />
                     <Route path='/ArteLuces/persona/:nombre/:apellido' element={<Persona />} />
