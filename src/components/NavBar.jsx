@@ -41,7 +41,7 @@ const NavBar = () => {
           <Link to={"/ArteLuces"}>
             <img
               className="logo-img"
-              src="../src/assets/imagenes/logo-luz.png"
+              src="assets/imagenes/logo-luz.png"
               alt="logo-web"
             />
           </Link>
