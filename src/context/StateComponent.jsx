@@ -1,14 +1,89 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
+import {
+  collection, getDocs, getFirestore, query, where
+} from "firebase/firestore";
 
 export const cartContext = createContext();
 
 const StateComponent = ({ children }) => {
+  const [user, setUser] = useState({})
+  const [serverData, setServerData] = useState([])
   const [productosCarrito, setProductosCarrito] = useState([]);
   const [cantidadTotal, setCantidadTotal] = useState(0);
   const [cantidad, setCantidad] = useState(1);
   const [estaEnCarrito, setEstaEnCarrito] = useState(false);
   const [carritoVacio, setCarritoVacio] = useState(true);
   const [valorTotal, setValorTotal] = useState(0);
+  const [cargando, setCargando] = useState(true);
+  const [category, setCategory] = useState("")
+
+
+  useEffect(() => {
+    console.log("una vez")
+    const user = JSON.parse(localStorage.getItem("user"))
+    console.log(user)
+    // console.log("HOLA " + user.name)
+    // console.log(user)
+    setUser(user)
+  }, [])
+
+  useEffect(() => {
+    // const user = JSON.parse(localStorage.getItem("user"))
+    // setUser(user)
+    // console.log(user)
+    // console.log("Entré")
+    console.log("usuario modificado")
+    localStorage.setItem("user", JSON.stringify(user))
+    // console.log(user)
+    // console.log("HOLA " + user.name)
+    // console.log(user)
+    // setUser(user)
+  }, [user])
+
+
+
+
+  // useEffect(() => {
+  //   const user = JSON.parse(localStorage.getItem("user"))
+  //   console.log("HOLA " + user.name)
+  //   // console.log(user)
+  //   setUser(user)
+  // }, [user])
+
+
+  // const perro = "Lambi"
+
+  //CARGAR PRODUCTOS DEL SERVIDOR
+  const cargarProductosServidor = (category) => {
+    const db = getFirestore();
+
+    // if (category != undefined) {
+    if (category === "pared" || category === "techo" || category === "mesa") {
+      const filterItems = query(
+        collection(db, "luminarias"),
+        where("categoria", "==", category)
+      );
+      getDocs(filterItems).then((snapshot) => {
+        const documentos = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        setServerData(documentos);
+        setCargando(false);
+      });
+    } else {
+      const itemsCollection = collection(db, "luminarias");
+      getDocs(itemsCollection).then((snapshot) => {
+        const documentos = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setServerData(documentos);
+        setCargando(false);
+      });
+    }
+  };
 
   //AGREGAR UN ITEM AL CARRITO
   const addItem = (producto, cantidad) => {
@@ -111,6 +186,15 @@ const StateComponent = ({ children }) => {
         valorTotal,
         valorTotalProductos,
         setCantidad,
+        serverData,
+        setServerData,
+        cargarProductosServidor,
+        cargando,
+        setCargando,
+        category,
+        setCategory,
+        user,
+        setUser
       }}
     >
       {children}

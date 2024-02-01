@@ -40,8 +40,8 @@ const CartWidget = () => {
 
   return (
     <>
-      <div className="mx-2 carrito-head" onClick={toggleShow}>
-        <span className="material-symbols-outlined pt-2">shopping_cart</span>
+      <div className="d-flex icon-box" onClick={toggleShow}>
+        <span className="material-symbols-outlined">shopping_cart</span>
         <span>{cantidadTotal}</span>
       </div>
 

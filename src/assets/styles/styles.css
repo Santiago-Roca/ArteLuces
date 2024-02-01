@@ -18,6 +18,29 @@
     cursor: pointer;
 }
 
+.icon-login {
+    /* width: 70px; */
+    font-size: 29px;
+    /* text-align: center; */
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.icon-box {
+    /* width: 20%; */
+    margin: 0px 15px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.icon-login:hover {
+    color: rgba(232, 230, 227, 0.75);
+    /* font-size: 35px !important; */
+    /* width: 100px; */
+}
+
 .logo-img {
     width: 31px;
 }
@@ -27,9 +50,8 @@
     text-align: center;
 }
 
-.navbar-nav {
-    width: 400px;
-    justify-content: space-between;
+.nav-link {
+    padding: 5px 15px !important;
 }
 
 .tarjeta {
@@ -295,4 +317,8 @@ a {
     font-size: 1.8rem;
     font-weight: 800;
     color: rgb(107, 3, 3);
+}
+
+.enlace {
+    cursor: pointer;
 }
