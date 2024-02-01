@@ -101,7 +101,7 @@ const CartWidget = () => {
                 }
               </h5>
 
-              <Link to={"./cart"}>
+              <Link to={"./ArteLuces/cart"}>
                 <Button
                   onClick={() => {
                     setShow(false);
