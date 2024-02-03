@@ -31,14 +31,22 @@ const Login = () => {
     //Conseguir datos del formulario con formData()
     const getDataForm = (e) => {
         e.preventDefault()
+        console.log("click")
+        
         const data = new FormData(e.target)
         console.log(data.value)
         const obj = {}
         data.forEach((value, key) => {
             (obj[key] = value)
-            console.log(key)
+            // console.log(key)
         })
+        // let user = obj
+        console.log(obj)
         setForm(obj)
+        setUser(obj)        
+
+        // localStorage.setItem("user", JSON.stringify(user))
+        localStorage.setItem("user", "HOLA")
         console.log(obj)
 
         // let user = {
@@ -47,8 +55,8 @@ const Login = () => {
         //     email: e.target.email.value
         // }
         // console.log(user)
-        localStorage.setItem("user", JSON.stringify(user))
-        setUser(user)
+        // localStorage.setItem("user", JSON.stringify(user))
+        // setUser(user)
     }
 
     const changing = ({ target }) => {

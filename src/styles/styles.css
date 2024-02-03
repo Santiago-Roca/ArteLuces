@@ -26,16 +26,26 @@
     cursor: pointer;
 }
 
+.cart-login {
+    /* width: 70px; */
+    /* font-size: 29px; */
+    /* text-align: center; */
+    color: #ffffff;
+    cursor: pointer;
+}
+
 .icon-box {
     /* width: 20%; */
     margin: 0px 15px;
+    color: #ffffff;
     justify-content: center;
     text-align: center;
     align-items: center;
     white-space: nowrap;
 }
 
-.icon-login:hover {
+.icon-login:hover,
+.cart-login:hover {
     color: rgba(232, 230, 227, 0.75);
     /* font-size: 35px !important; */
     /* width: 100px; */

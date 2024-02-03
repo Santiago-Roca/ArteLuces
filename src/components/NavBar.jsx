@@ -56,44 +56,22 @@ const NavBar = () => {
               Catálogo de Productos
             </Nav.Link>
             <NavDropdown title="Categorias" id="collasible-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/category/pared">
+              <NavDropdown.Item as={Link} to="/ArteLuces/category/pared">
                 Luces de Pared
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/techo">
+              <NavDropdown.Item as={Link} to="/ArteLuces/category/techo">
                 Luces de Techo
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/mesa">
+              <NavDropdown.Item as={Link} to="/ArteLuces/category/mesa">
                 Luces de Mesa
               </NavDropdown.Item>
             </NavDropdown>
-            {/* <Nav.Link>
-              Login
-            </Nav.Link>
-            <Nav.Link>
-              Login 2
-            </Nav.Link> */}
           </Nav>
           <Form className="d-flex form-busqueda ms-4">
-
             <Busqueda />
-
-            {/* <Form.Control
-              type="search"
-              name="searchInput"
-              // value={busqueda}
-              onChange={searchMovie}
-              autoComplete="off"
-              placeholder="Buscar un producto"
-              className="me-2 buscar-nav"
-              aria-label="Search"
-            />
-            <Button className="btn-buscar" variant="dark">
-              Buscar
-            </Button> */}
             <CartWidget />
-
             <LoginWidget />
-            
+              
             {/* <Nav.Link as={Link} to="/login">
               <LoginWidget />
             </Nav.Link> */}
