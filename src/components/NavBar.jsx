@@ -41,7 +41,7 @@ const NavBar = () => {
           <Link to={"/ArteLuces"}>
             <img
               className="logo-img"
-              src="src/public/imagenes/logo-luz.png"
+              src="https://firebasestorage.googleapis.com/v0/b/arteluces-58b7c.appspot.com/o/logo-luz.png?alt=media&token=a8517621-8612-4ea6-ba4f-b9160bd7c467"
               alt="logo-web"
             />
           </Link>

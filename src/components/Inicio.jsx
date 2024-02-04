@@ -6,7 +6,7 @@ const Inicio = () => {
       <div>
         <span className="logo-letra">Arte Luces</span>
         <div className="boxImg-principal">
-          <img src="src/public/imagenes/inicio.jpeg" alt="imagen-inicio" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/arteluces-58b7c.appspot.com/o/inicio.jpeg?alt=media&token=cb95526e-cf02-4d1a-aed2-5824a238787c" alt="imagen-inicio" />
         </div>
       </div>
     </section>
