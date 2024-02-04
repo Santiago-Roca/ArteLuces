@@ -19,31 +19,31 @@ En la página del carrito es posible remover productos y en caso de querer confi
 
 ### Página de Inicio
 ---
-![img-inicio](assets/imagenes/inicioWeb.jpg)
+![img-inicio](dist/assets/imagenes/inicioWeb.jpg)
 
 ### Catálogo de productos
 ---
-![img-catalogo](assets/imagenes/catalogo.jpg)
+![img-catalogo](dist/assets/imagenes/catalogo.jpg)
 
 ### Detalles de un item 
 ---
-![item-detail](assets/imagenes/item-detail.jpg)
+![item-detail](dist/assets/imagenes/item-detail.jpg)
 
 ### Productos en Widget Carrito 
 ---
-![item-detail](assets/imagenes/widget-carrito.jpg)
+![item-detail](dist/assets/imagenes/widget-carrito.jpg)
 
 ### Página Carrito 
 ---
-![item-detail](assets/imagenes/carrito-page.jpg)
+![item-detail](dist/assets/imagenes/carrito-page.jpg)
 
 ### Formulario de compra 
 ---
-![item-detail](assets/imagenes/Form-page.jpg)
+![item-detail](dist/assets/imagenes/Form-page.jpg)
 
 
 ### Ejemplo de funcionamiento
 ---
 
-![item-detail](assets/gif/ArteLuces.gif)
+![item-detail](dist/assets/gif/ArteLuces.gif)
 

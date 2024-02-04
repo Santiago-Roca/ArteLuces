@@ -54,7 +54,7 @@ const FormCompra = () => {
 
   //REDIRECCIONAR LUEGO DE COMPRA
   function redireccionarInicio() {
-    window.location = "./inicio";
+    window.location = "./ArteLuces/inicio";
   }
 
   //VALIDA CONFIRMACIÓN DE CORREO
