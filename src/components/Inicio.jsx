@@ -6,7 +6,7 @@ const Inicio = () => {
       <div>
         <span className="logo-letra">Arte Luces</span>
         <div className="boxImg-principal">
-          <img src="dist/assets/imagenes/inicio.jpeg" alt="imagen-inicio" />
+          <img src="src/public/imagenes/inicio.jpeg" alt="imagen-inicio" />
         </div>
       </div>
     </section>
