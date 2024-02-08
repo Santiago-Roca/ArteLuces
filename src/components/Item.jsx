@@ -10,9 +10,6 @@ const Item = ({ id, nombre, categoria, img }) => {
         <Card.Body className="tarjeta">
           <Card.Title className="text-center">{nombre}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">{`Luz de ${categoria}`}</Card.Subtitle>
-          {/* <NavLink to={`/item/${id}`}>
-            <Button variant="dark">Detalles</Button>
-          </NavLink> */}
           <Link to={`/ArteLuces/item/${id}`}>
             <Button variant="dark">Detalles</Button>
           </Link>

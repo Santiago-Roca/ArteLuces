@@ -3,7 +3,6 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { cartContext } from "../context/StateComponent";
 
-// const Busqueda = ({ serverData, setServerData, cargarProductosServidor }) => {
 const Busqueda = () => {
 
     //USE STATE

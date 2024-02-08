@@ -19,45 +19,18 @@ const StateComponent = ({ children }) => {
 
 
   useEffect(() => {
-    console.log("una vez")
     const user = JSON.parse(localStorage.getItem("user"))
-    console.log(user)
-    // console.log("HOLA " + user.name)
-    // console.log(user)
     setUser(user)
   }, [])
 
   useEffect(() => {
-    // const user = JSON.parse(localStorage.getItem("user"))
-    // setUser(user)
-    // console.log(user)
-    // console.log("Entré")
-    console.log("usuario modificado")
     localStorage.setItem("user", JSON.stringify(user))
-    // console.log(user)
-    // console.log("HOLA " + user.name)
-    // console.log(user)
-    // setUser(user)
   }, [user])
-
-
-
-
-  // useEffect(() => {
-  //   const user = JSON.parse(localStorage.getItem("user"))
-  //   console.log("HOLA " + user.name)
-  //   // console.log(user)
-  //   setUser(user)
-  // }, [user])
-
-
-  // const perro = "Lambi"
 
   //CARGAR PRODUCTOS DEL SERVIDOR
   const cargarProductosServidor = (category) => {
     const db = getFirestore();
 
-    // if (category != undefined) {
     if (category === "pared" || category === "techo" || category === "mesa") {
       const filterItems = query(
         collection(db, "luminarias"),
