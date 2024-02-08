@@ -13,13 +13,6 @@ import { cartContext } from "../context/StateComponent";
 
 const NavBar = () => {
 
-  // const [busqueda, setBusqueda] = useState("")
-  // const searchMovie = (e)=>{
-  //   setBusqueda(e.target.value)
-  //   console.log(busqueda)
-  // }
-
-
   const { user, setUser } = useContext(cartContext)
 
   const showUser = () => {
@@ -27,14 +20,8 @@ const NavBar = () => {
     Inicio
   </Nav.Link>}`
   }
-  // const showUser = () => {
-  //   return `<div>${user.name}</div>`
-  // }
 
   return (
-
-
-
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
         <Navbar.Brand>
@@ -71,37 +58,11 @@ const NavBar = () => {
             <Busqueda />
             <CartWidget />
             <LoginWidget />
-              
-            {/* <Nav.Link as={Link} to="/login">
-              <LoginWidget />
-            </Nav.Link> */}
 
-            {/* {user && <div className="d-flex icon-box">
-              {user.userName}
-            </div>} */}
-
-            {/* {user != null ? ( */}
-
-            {/* ORIGINAL */}
-            {/* {user.name ? (
-              <>
-                <div className="d-flex icon-box"><LoginWidget /> </div>
-                <div className="d-flex icon-box">{user.userName} </div>
-                <div onClick={e => {
-                  e.preventDefault()
-                  setUser({})
-                }} className="d-flex icon-box enlace">Cerrar Sesión</div>
-              </>
-            ) : (<Nav.Link as={Link} to="/login">
-              <LoginWidget />
-            </Nav.Link>)} */}
-
-            {/* <NavLink to={"/login"}><LoginWidget /></NavLink> */}
           </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 };
-
 export default NavBar;
